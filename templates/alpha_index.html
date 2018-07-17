@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block post_title %}alpha index / {% endblock %}
+
+{% block body_content %}
+    {% for group in posts|groupby('title_first_char') %}
+        <a href="#{{ group.grouper }}">{{ group.grouper }}</a>
+    {% endfor %}
+{% for group in posts|groupby('title_first_char') %}
+<h2><a name="{{ group.grouper }}">{{ group.grouper }}</a></h2>
+<ul>
+    {% for post in group.list %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.published.year }})</li>
+    {% endfor %}
+</ul>
+{% endfor %}
+{% endblock %}

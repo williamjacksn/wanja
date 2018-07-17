@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body_content %}
+{% for post in posts %}
+<h2>{{ post.title }}</h2>
+<p class="small"><a href="{{ post.url }}">&para;</a> {{ post.published }}</p>
+{{ post.body|safe }}
+<br><br>
+{% endfor %}
+{% endblock %}

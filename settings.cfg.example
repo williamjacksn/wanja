@@ -1,0 +1,5 @@
+BLOG_NAME = 'My Amazing Blog'
+BLOG_DESCRIPTION = 'The world\'s most amazing blog in the world'
+BLOG_BASE_URL = 'http://blog.example.com'  # No trailing slash
+BLOG_TIMEZONE = 'CST'
+POSTS_ON_FRONT_PAGE = 5
